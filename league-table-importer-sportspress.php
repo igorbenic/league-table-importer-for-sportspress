@@ -5,7 +5,7 @@ Plugin URI: #
 Description: A Plugin which can import league tables in sportspress.
 Author: Igor Benić
 Author URI: http://twitter.com/igorbenic
-Version: 0.2
+Version: 0.3
 */
 
 // Exit if accessed directly
@@ -117,7 +117,13 @@ class League_Table_Importer_SportsPress {
 
 					            	if(move_uploaded_file($temp_name, $targetPath."/".$fileNameChanged)){
 					            		
-					            		@unlink($excelFile);
+					            		/**
+					            		 * @since 0.3
+					            		 */
+					            		if($excelFile != $targetPath."/".$fileNameChanged){
+					            			@unlink($excelFile);
+					            		}
+					            		
 
 					            		update_option( $this->optionName, $targetPath."/".$fileNameChanged);
 					            		
@@ -310,8 +316,8 @@ class League_Table_Importer_SportsPress {
         }
       
         
-
-        if($excelFile != null && $excelFile != ""){
+         
+        if($excelFile != null && $excelFile != "" && file_exists($excelFile)){
         	require_once dirname( __FILE__ ) . '/includes/PHPExcel/PHPExcel.php';
 
         	//  Read your Excel workbook

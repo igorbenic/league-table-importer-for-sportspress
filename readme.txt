@@ -3,7 +3,7 @@ Contributors: ibenic
 Tags: sportspress, import
 Requires at least: 4.0
 Tested up to: 4.0
-Stable tag: 0.2
+Stable tag: 0.3
 License: GPLv2 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,8 @@ Roadmap:
 - Better UI 
 - List of uploaded files + delete option
 
+GitHub Repository: https://github.com/igorbenic/league-table-importer-for-sportspress
+
 == Installation ==
 
 
@@ -39,6 +41,9 @@ If other are interested in using this plugin I can look at how to import and sup
 
 
 == Changelog ==
+
+= 0.3 =
+* Fixed bug that removed the uploaded file if the file had the same name as the previous uploaded one.
 
 = 0.2 =
 * Fixed Array Dereferencing to support PHP < 5.4
