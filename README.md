@@ -37,6 +37,9 @@ If other are interested in using this plugin I can look at how to import and sup
 
 ## Changelog 
 
+**0.3.1**
+* Added example table
+
 **0.3**
 * Fixed the bug when uploading a file with the same name as the previous one. That file would be deleted also. Not anymore.
 
