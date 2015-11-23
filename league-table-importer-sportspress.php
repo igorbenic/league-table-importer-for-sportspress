@@ -85,9 +85,7 @@ class League_Table_Importer_SportsPress {
 
     		$tabs = $theClass->add_tab( $tabs );
 
-    		/**
-    		 * Ako je tab od te onda mi daj tu klasu!
-    		 */
+    		 
     		if( $active_tab == $theClass->option_slug ){
 
     			$activeClass = $theClass;
