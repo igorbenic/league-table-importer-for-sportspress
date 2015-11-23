@@ -95,7 +95,26 @@ class League_Table_Importer_SportsPress {
     		}
 
     	}
+
+    	/**
+    	 * If no tab is selected get the first one
+    	 */
+    	if($activeClass == null && count($options) > 0){
+
+    		$class = $options[0];
+
+    		$activeClass = new $class();
+
+    		$active_tab = $activeClass->option_slug;
+    	}
        	
+       	/**
+       	 * If there is still no active class, then show nothing 
+       	 */
+       	if($activeClass == null){
+
+       		return;
+       	}
 
     	?>
 		
