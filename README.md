@@ -4,6 +4,9 @@
 
 Import league tables for SportsPress and add non existing teams to WordPress.
 
+**How to extend with new importers?**
+This can be done by contributing to this plugin or by creating your own importer in a separate plugin. A simple example can be seen in the includes/class-options-excel.php
+
 ## Description 
 
 This plugin is used to import league tables into SportsPress League Tables. Teams that do not exist are created automatically.
@@ -36,6 +39,9 @@ If other are interested in using this plugin I can look at how to import and sup
 
 
 ## Changelog 
+
+**1.0**
+* Code refactored. Easily extendable with new importers
 
 **0.3.1**
 * Added example table
