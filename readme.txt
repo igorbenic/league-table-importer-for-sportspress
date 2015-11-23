@@ -3,7 +3,7 @@ Contributors: ibenic
 Tags: sportspress, import
 Requires at least: 4.0
 Tested up to: 4.0
-Stable tag: 0.3
+Stable tag: 1.0
 License: GPLv2 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,9 +21,10 @@ At the moment this plugin supports only Excel 2007 and up. Excels in older versi
 For now, after each new file upload the old file is deleted from the server.
 
 Roadmap:
-- Refactor and support new formats
-- Better UI 
-- List of uploaded files + delete option
+
+ - Refactor and support new formats
+ - Better UI 
+ - List of uploaded files + delete option
 
 GitHub Repository: https://github.com/igorbenic/league-table-importer-for-sportspress
 
@@ -41,6 +42,12 @@ If other are interested in using this plugin I can look at how to import and sup
 
 
 == Changelog ==
+
+= 1.0 =
+* Code refactored. Easily extendable with new importers
+
+= 0.3.1 =
+* Added Example Table
 
 = 0.3 =
 * Fixed bug that removed the uploaded file if the file had the same name as the previous uploaded one.
