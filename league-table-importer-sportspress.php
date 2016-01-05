@@ -185,7 +185,7 @@ class League_Table_Importer_SportsPress {
 		require_once dirname( __FILE__ ) . '/includes/class-tgm-plugin-activation.php';
 		require_once dirname( __FILE__ ) . '/includes/class-options.php';
 		require_once dirname( __FILE__ ) . '/includes/class-options-excel.php';
-
+        require_once dirname( __FILE__ ) . '/includes/class-options-xml.php';
 	}
 
 	/**
