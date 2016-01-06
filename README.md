@@ -16,7 +16,10 @@ This plugin is used to import league tables into SportsPress League Tables. Team
 You can select an existing league table to update, equalize the imported teams with the existing teams or the team will be created automatically if selected.
 Every configuration setting can be select for each column that is imported so that it is flexible enough to import excels that are not always the same in columns.
 
-At the moment this plugin supports only Excel 2007 and up. Excels in older versions are not tested.
+Plugin Supports:
+
+ - Excel 2007 (not tested on older formats)
+ - XML
 
 For now, after each new file upload the old file is deleted from the server.
 
@@ -41,6 +44,11 @@ If other are interested in using this plugin I can look at how to import and sup
 
 
 ## Changelog 
+
+**1.1**
+* Fixed link to demo files
+* Added additional action hooks to the code
+* Added XML importer
 
 **1.0**
 * Code refactored. Easily extendable with new importers

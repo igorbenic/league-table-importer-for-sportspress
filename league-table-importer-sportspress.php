@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: League Table Importer for SportsPress
-Plugin URI: #
+Plugin URI: https://wordpress.org/plugins/league-table-importer-for-sportspress/
 Description: A Plugin which can import league tables in sportspress.
 Author: Igor Benić
 Author URI: http://twitter.com/igorbenic
-Version: 1.0
+Version: 1.1
 */
 
 // Exit if accessed directly
@@ -185,6 +185,10 @@ class League_Table_Importer_SportsPress {
 		require_once dirname( __FILE__ ) . '/includes/class-tgm-plugin-activation.php';
 		require_once dirname( __FILE__ ) . '/includes/class-options.php';
 		require_once dirname( __FILE__ ) . '/includes/class-options-excel.php';
+        
+        /**
+        * @since 1.1
+        */
         require_once dirname( __FILE__ ) . '/includes/class-options-xml.php';
 	}
 

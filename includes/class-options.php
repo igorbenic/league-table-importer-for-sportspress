@@ -300,6 +300,10 @@ abstract class LTI_Options {
 
 	        		update_option( $this->optionName, $whereToUpload );
 
+	        		/**
+	        		 * Action to save additional form fields to database
+	        		 * @since 1.1
+	        		 */
 	        		do_action("lti_upload_form_save_" . $this->option_slug);
 	        		
 	        		$this->optionData = get_option( $this->optionName );
@@ -677,7 +681,14 @@ abstract class LTI_Options {
 			<h3><?php  _e('Import Table', 'sportspress-lti'); ?></h3>           
             <form method="post" action="" enctype="multipart/form-data">
              	<input type="file" name="<?php echo $this->upload_file_name; ?>" />
-             	<?php do_action("lti_upload_form_" . $this->option_slug); ?>
+             	<?php 
+             		/**
+             		 * Action to add additional upload inputs
+             		 * @since 1.1
+             		 */
+             		do_action("lti_upload_form_" . $this->option_slug); 
+
+             	?>
              	<button type="submit" name="<?php echo $this->upload_id;  ?>" class="button-primary"><?php echo $this->upload_text; ?></button>
            		
 
@@ -824,6 +835,11 @@ abstract class LTI_Options {
 			add_post_meta( $this->league_table_id, 'sp_team', $teamID );
 		}
 
+		/**
+		 * Action to perform additional savings when the table is saved.
+		 * Used together with additional fields
+		 * @since 1.1
+		 */
 		do_action("lti_save_table_" . $this->option_slug);
 
 		$this->show_message(__("League Table Imported Successfully.", "sportspress-lti"), "updated");
