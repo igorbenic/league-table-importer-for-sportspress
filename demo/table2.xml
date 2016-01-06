@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='us-ascii'?>
+<root>
+	<teamo>  <position>  1</position>
+	   <name>Team 1</name>
+<played>2</played>
+<won>1</won>
+<d>0</d>
+<l>1</l>
+<gf>1</gf>
+<ga>1</ga>
+<gd>0</gd>
+<points>3</points>
+
+	</teamo>
+
+	<teamo>  <position> 2</position>
+	   <name>Team 2</name>
+<played>2</played>
+<won>1</won>
+<d>0</d>
+<l>1</l>
+<gf>1</gf>
+<ga>1</ga>
+<gd>0</gd>
+<points>3</points>
+
+	</teamo>
+</root>

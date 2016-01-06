@@ -299,6 +299,8 @@ abstract class LTI_Options {
 	        		
 
 	        		update_option( $this->optionName, $whereToUpload );
+
+	        		do_action("lti_upload_form_save_" . $this->option_slug);
 	        		
 	        		$this->optionData = get_option( $this->optionName );
 
@@ -675,7 +677,10 @@ abstract class LTI_Options {
 			<h3><?php  _e('Import Table', 'sportspress-lti'); ?></h3>           
             <form method="post" action="" enctype="multipart/form-data">
              	<input type="file" name="<?php echo $this->upload_file_name; ?>" />
+             	<?php do_action("lti_upload_form_" . $this->option_slug); ?>
              	<button type="submit" name="<?php echo $this->upload_id;  ?>" class="button-primary"><?php echo $this->upload_text; ?></button>
+           		
+
             </form>
 
 		<?php
@@ -818,6 +823,8 @@ abstract class LTI_Options {
 		foreach ($teamIDs as $teamID) {
 			add_post_meta( $this->league_table_id, 'sp_team', $teamID );
 		}
+
+		do_action("lti_save_table_" . $this->option_slug);
 
 		$this->show_message(__("League Table Imported Successfully.", "sportspress-lti"), "updated");
 

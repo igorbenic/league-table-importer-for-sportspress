@@ -58,7 +58,7 @@ class LTI_Options_Excel extends LTI_Options {
 		
 		<p><?php _e("Table Example:", "sportspress-lti"); ?></p>
         
-        <a href="<?php echo plugin_dir_url(__FILE__); ?>demo/table.xlsx"><?php _e("Table.xlsx", "sportspress-lti"); ?></a>
+        <a href="<?php echo IBENIC_SP_TABLE_URL; ?>/demo/table.xlsx"><?php _e("Table.xlsx", "sportspress-lti"); ?></a>
         
 		<?php
 	}
